@@ -1,0 +1,71 @@
+{
+  "name": "town-story-sui-contract-sdks",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": "false",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "postinstall": "preconstruct dev",
+    "dev": "preconstruct dev",
+    "clean": "yarn workspaces run clean",
+    "prebuild": "yarn clean",
+    "build": "yarn prebuild && preconstruct build",
+    "start": "preconstruct watch",
+    "release": "yarn build && yarn publish",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "docs:generate": "yarn run typedoc --out docs",
+    "pkg": "manypkg run",
+    "pkgs:check": "manypkg check",
+    "pkgs:fix": "manypkg fix",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "yarn workspaces run clean"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 160,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "MirrorWorld Techforce",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@changesets/cli": "^2.21.1",
+    "@manypkg/cli": "^0.18.0",
+    "@preconstruct/cli": "^2.1.1",
+    "@size-limit/preset-small-lib": "^5.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "bs58": "^5.0.0",
+    "bundlesize": "^0.18.1",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "prettier": "^2.3.2",
+    "size-limit": "^5.0.3",
+    "tslib": "^2.3.1",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typedoc": "^0.22.14",
+    "typedoc-plugin-rename-defaults": "^0.4.0",
+    "typescript": "^4.6.2"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "entryPoints": [
+    "packages/rage-effect/src/index.ts"
+  ],
+  "out": "docs"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@mirrorworld/sui.rageeffect",
+  "version": "0.0.1",
+  "description": "market SDK",
+  "keywords": [],
+  "author": "Bilal Afzal <bilal@mirrorworld.fun>",
+  "license": "MIT",
+  "main": "dist/mirrorworld-sui.rageeffect.cjs.js",
+  "module": "dist/mirrorworld-sui.rageeffect.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/mirrorworld-sui.rageeffect.cjs.js",
+      "default": "./dist/mirrorworld-sui.rageeffect.esm.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0",
+    "tslib": "^2.3.1",
+    "tsutils": "^3.21.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@mysten/sui.js": "0.34.1",
+    "keccak256": "1.0.6"
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
