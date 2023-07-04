@@ -1,5 +1,11 @@
 # @mirrorworld/sui.townstory
 
+## 0.0.2
+
+### Patch Changes
+
+- init
+
 ## 4.0.3
 
 ### Patch Changes
